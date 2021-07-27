@@ -1,15 +1,14 @@
 <template>
-  <div class="bg-red-300">
-	test
-	<HelloWorld msg="Hello Vue 3 + TypeScripts + Vite" />
+  <div>
+	<h1 class="text-2xl">Home:</h1>
+	<HelloWorld msg="Hello Vue 3 + TypeScripts + Vite: Hello World" />
   </div>
 </template>
 
 <script lang="ts">
 import HelloWorld from '../components/HelloWorld.vue'
-import { defineComponent } from 'vue'
 
-export default defineComponent({
+export default ({
 	name: 'Home',
 	components: {
 		HelloWorld,

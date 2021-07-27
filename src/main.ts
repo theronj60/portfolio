@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
-import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import App from './App.vue'
 import './assets/index.css'
 
 //font-awesome
@@ -11,10 +11,12 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 library.add(faSignOutAlt)
 
 // Route Imports
-import Home from './pages/home.vue'
+import Home from './pages/Home.vue'
+import About from './pages/About.vue'
 
 const routes = [
 	{ path: '/', component: Home },
+	{ path: '/about', component: About },
   ]
 
 const router = createRouter({
