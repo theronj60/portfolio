@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="h-100" :style="bgImg">
 	<h1 class="text-2xl">Home:</h1>
 	<HelloWorld msg="Vite Template for Vue 3 + Typescript + TailwindCss" />
 	<section>
-		This is a quick start template configured with: 
+		This is a quick start template configured with: test
 		<ul>
 			<li v-for="(tool, index) in state.list" :key="index">
 				{{tool}}
@@ -15,6 +15,7 @@
 
 <script lang="ts">
 import HelloWorld from '../components/HelloWorld.vue'
+import backGroundImg from '../assets/monument-valley-night.jpg'
 import { defineComponent, reactive } from 'vue'
 
 export default defineComponent ({
@@ -23,6 +24,7 @@ export default defineComponent ({
 		HelloWorld,
 	},
 	setup() {
+		const bgImg = `background-image: url(${backGroundImg});`
 		const state = reactive({
 			list: [
 				'vite',
@@ -35,7 +37,8 @@ export default defineComponent ({
 				'jest'
 			]
 		})
-		return { state }
+		return { state, bgImg }
 	}
 })
 </script>
+
