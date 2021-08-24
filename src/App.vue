@@ -1,14 +1,20 @@
 <template>
   <main class="flex flex-col justify-center">
-    <router-view></router-view>
+  	<Home />
+	<About />
   </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Home from './pages/Home.vue'
+import About from './pages/About.vue'
 
-export default defineComponent({
-	
+export default defineComponent ({
+	components: {
+		Home,
+		About
+	},
 })
 </script>
 
@@ -19,6 +25,5 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
