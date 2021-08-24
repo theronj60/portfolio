@@ -15,6 +15,7 @@
 
 <script lang="ts">
 import HelloWorld from '../components/HelloWorld.vue'
+import backGroundImg from '../assets/monument-valley-night.jpg'
 import { defineComponent, reactive } from 'vue'
 import backGroundImg from '../assets/monument-valley-night.jpg'
 
@@ -41,8 +42,4 @@ export default defineComponent ({
 	}
 })
 </script>
-
-<style>
-
-</style>
 
