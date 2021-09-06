@@ -12,15 +12,14 @@ export default defineComponent({
 		return { navItems }
 	}
 })
-	
 </script>
 
 <template>
-	<nav class="absolute h-16 bg-gray-800 opacity-75 w-full text-gray-100 px-4 flex items-center content-center">
-		<span class="justify-center rounded-full bg-gray-200 w-12 h-12"></span>
+	<nav class="absolute h-16 bg-gray-800 opacity-75 w-full text-gray-100 px-4 flex justify-between items-center content-center">
+		<span class="rounded-full bg-gray-200 w-12 h-12 ml-12"></span>
 		<ul class="flex justify-self-end items-center">
 			<a v-for="nav in navItems" :key="nav.name" :href="nav.link">
-				<li class="mx-2">{{ nav.name }}</li>
+				<li class="mx-2 font-black">{{ nav.name }}</li>
 			</a>
 		</ul>	
 	</nav>

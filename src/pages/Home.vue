@@ -37,10 +37,10 @@ export default defineComponent ({
 		<div class="h-1/3">
 		</div>
 		<div class="rounded-lg flex flex-col justify-center h-1/3 w-3/4 mx-auto">
-			<span class="text-2xl">
+			<span class="text-2xl font-semibold">
 				Theron Joe
 			</span>
-			<span class="text-3xl">
+			<span class="text-3xl font-black">
 				Web Developer
 			</span>
 		</div>	
