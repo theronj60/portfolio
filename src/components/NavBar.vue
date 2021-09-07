@@ -15,12 +15,15 @@ export default defineComponent({
 </script>
 
 <template>
-	<nav class="absolute h-16 bg-gray-800 opacity-75 w-full text-gray-100 px-4 flex justify-between items-center content-center">
-		<span class="rounded-full bg-gray-200 w-12 h-12 ml-12"></span>
-		<ul class="flex justify-self-end items-center">
+	<nav class="absolute h-16 bg-gray-800 opacity-75 min-w-screen w-full text-gray-100 px-4 flex justify-between items-center">
+		<span class="rounded-full bg-gray-200 mx-auto w-12 h-12 md:ml-12"></span>
+		<div class="md:hidden flex justify-self-end items-center">
+			<font-awesome-icon :icon="['fas', 'bars']" class="text-2xl font-bold" />
+		</div>
+		<ul class="md:flex justify-self-end items-center hidden">
 			<a v-for="nav in navItems" :key="nav.name" :href="nav.link">
 				<li class="mx-2 font-black">{{ nav.name }}</li>
 			</a>
 		</ul>	
-	</nav>
+	</nav>	
 </template>
