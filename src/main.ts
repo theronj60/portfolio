@@ -5,10 +5,10 @@ import './assets/index.css'
 
 //font-awesome
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons"
+import { faChevronDown, faBars } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 
-library.add(faSignOutAlt)
+library.add(faChevronDown, faBars)
 
 // Route Imports
 import Home from './pages/Home.vue'
