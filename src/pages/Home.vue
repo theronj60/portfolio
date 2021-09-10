@@ -25,7 +25,7 @@ export default defineComponent ({
 </script>
 
 <template>
-	<section ref="home" class="min-h-screen min-w-screen flex flex-col justify-center text-gray-100" :style="bgImg">
+	<section id="home" ref="home" class="min-h-screen min-w-screen flex flex-col justify-center text-gray-100" :style="bgImg">
 		<div class="h-1/3">
 		</div>
 		<div class="rounded-lg flex flex-col justify-center h-1/3 w-3/4 mx-auto">

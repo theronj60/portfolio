@@ -9,31 +9,22 @@ export default defineComponent({
 			{name: 'Projects', link: '#projects'},
 			{name: 'Contact', link: '#contact'},
 		]
-		const active = false
-		return { navItems, active }
+		return { navItems }
 	}
-	// @TODO set up active nav styles
 })
 </script>
 
 <template>
-	<nav class="test fixed h-16 bg-gray-800 opacity-75 min-w-screen w-full text-gray-100 px-4 flex justify-between items-center">
-	    <img src="../assets/mnts.png" class="h-12 w-12 ml-auto md:ml-12" alt="page-logo"/>
+	<nav class="absolute h-16 bg-gray-800 opacity-75 min-w-screen w-full text-gray-100 px-4 flex justify-between items-center">
+	    <img src="../assets/mnts.png" class="h-12 w-12 mx-auto md:ml-12" alt="page-logo"/>
 		<!--<span class="rounded-full bg-gray-200 mx-auto w-12 h-12 md:ml-12"></span>-->
 		<div class="md:hidden flex justify-self-end items-center">
 			<font-awesome-icon :icon="['fas', 'bars']" class="text-2xl font-bold" />
 		</div>
 		<ul class="md:flex justify-self-end items-center hidden">
 			<a v-for="nav in navItems" :key="nav.name" :href="nav.link">
-				<li :class="['mx-2 font-black', {'border-b-w': active}]">{{ nav.name }}</li>
+				<li class="mx-2 font-black">{{ nav.name }}</li>
 			</a>
 		</ul>	
 	</nav>	
 </template>
-
-<style>
-nav > .active > a{
-	border-bottom: 2px;
-	background-color: red;
-}
-</style>
