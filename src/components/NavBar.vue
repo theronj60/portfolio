@@ -1,16 +1,23 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, reactive } from 'vue'
 export default defineComponent({
 	setup() {
-		const navItems = [
-			{name: 'Home', link: '#home'},
-			{name: 'About', link: '#about'},
-			{name: 'Stack', link: '#stack'},
-			{name: 'Projects', link: '#projects'},
-			{name: 'Contact', link: '#contact'},
-		]
-		const active = false
-		return { navItems, active }
+		const state = reactive({
+			navItems: [
+				{name: 'Home', link: '#home', active: true},
+				{name: 'About', link: '#about', active: false},
+				{name: 'Stack', link: '#stack', active: false},
+				{name: 'Projects', link: '#projects', active: false},
+				{name: 'Contact', link: '#contact', active: false},
+			]
+		})
+		function setNav(index: any) {
+		state.navItems.forEach((nav) => {
+			nav.active = false
+		})
+			state.navItems[index].active = true
+		}
+		return { state, setNav }
 	}
 	// @TODO set up active nav styles
 })
@@ -24,8 +31,8 @@ export default defineComponent({
 			<font-awesome-icon :icon="['fas', 'bars']" class="text-2xl font-bold" />
 		</div>
 		<ul class="md:flex justify-self-end items-center hidden">
-			<a v-for="nav in navItems" :key="nav.name" :href="nav.link">
-				<li :class="['mx-2 font-black', {'border-b-w': active}]">{{ nav.name }}</li>
+			<a v-for="(nav, index) in state.navItems" :key="nav.name" :href="nav.link" @click="setNav(index)">
+				<li :class="['mx-2 font-black', {'border-b-4': nav.active}]">{{ nav.name }}</li>
 			</a>
 		</ul>	
 	</nav>	
