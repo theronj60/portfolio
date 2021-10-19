@@ -12,10 +12,10 @@ export default defineComponent({
 			]
 		})
 		function setNav(index: any) {
-		state.navItems.forEach((nav) => {
-			nav.active = false
-		})
-			state.navItems[index].active = true
+			state.navItems.forEach((nav) => {
+				nav.active = false
+			})
+				state.navItems[index].active = true
 		}
 		return { state, setNav }
 	}
@@ -39,8 +39,8 @@ export default defineComponent({
 </template>
 
 <style>
-nav > .active > a{
-	border-bottom: 2px;
-	background-color: red;
-}
+/* nav > .active > a{ */
+/* 	border-bottom: 2px; */
+/* 	background-color: red; */
+/* } */
 </style>

@@ -5,6 +5,7 @@
   <main class="flex flex-col justify-center">
   	<Home />
 	<About />
+	<Stack />
   </main>
 </template>
 
@@ -13,12 +14,14 @@ import { defineComponent } from 'vue'
 import NavBar from './components/NavBar.vue'
 import Home from './pages/Home.vue'
 import About from './pages/About.vue'
+import Stack from './pages/Stack.vue'
 
 export default defineComponent ({
 	components: {
 		NavBar,
 		Home,
-		About
+		About,
+		Stack
 	},
 })
 </script>
