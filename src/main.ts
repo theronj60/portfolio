@@ -11,12 +11,27 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 library.add(faChevronDown, faBars)
 
 // Route Imports
-import Home from './pages/Home.vue'
-// import About from './pages/About.vue'
+import Default from './layout/default.vue'
+import Demos from './layout/demos.vue'
+import Index from './pages/demos/Index.vue'
+import Table from './pages/demos/Table.vue'
 
 const routes = [
-	{ path: '/', component: Home },
-	// { path: '/about', component: About },
+	{ path: '/', component: Default },
+	{ 
+		path: '/demos',
+		component: Demos,
+		children: [
+			{
+				path: '',
+				component: Index,
+			},
+			{
+				path: 'table',
+				component: Table,
+			},
+		]
+	},
 ]
 
 const router = createRouter({
