@@ -34,6 +34,9 @@ export default defineComponent ({
 			<span class="text-3xl md:text-5xl font-black">
 				Web Developer
 			</span>
+			<div>
+				<router-link to="/demos">Table Demo</router-link>
+			</div>
 		</div>	
 		<div class="flex items-end justify-center h-1/3 pb-4">
 			<a href="#about" class="flex flex-col items-center px-4">
