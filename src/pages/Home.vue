@@ -1,7 +1,6 @@
 <script lang="ts">
 import backGroundImg from '../assets/monument-valley-night.jpg'
 import { defineComponent, reactive } from 'vue'
-/* import backGroundImg from '../assets/monument-valley-night.jpg' */
 
 export default defineComponent ({
 	name: 'Home',
