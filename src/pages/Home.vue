@@ -34,8 +34,8 @@ export default defineComponent ({
 			<span class="text-3xl md:text-5xl font-black">
 				Web Developer
 			</span>
-			<div>
-				<router-link to="/demos">Table Demo</router-link>
+			<div class="my-8 text-2xl hover:border-b-2 hover:border-blue-300">
+				<router-link to="/demos/table">Data Table Demo</router-link>
 			</div>
 		</div>	
 		<div class="flex items-end justify-center h-1/3 pb-4">
